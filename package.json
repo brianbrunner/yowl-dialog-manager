@@ -1,0 +1,36 @@
+{
+  "name": "yowl-dialog-manager",
+  "version": "0.1.0",
+  "description": "Multi-interaction dialog management for yowl",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint index.js lib/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianbrunner/yowl.git"
+  },
+  "keywords": [
+    "chat",
+    "chatbot",
+    "yowl",
+    "dialog"
+  ],
+  "author": "Brian Brunner (brian.brunner@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianbrunner/yowl/issues"
+  },
+  "devDependencies": {
+    "jshint": "latest",
+    "mocha": "latest"
+  },
+  "jshintConfig": {
+    "node": true,
+    "proto": true
+  },
+  "homepage": "https://github.com/brianbrunner/yowl#readme",
+  "dependencies": {
+    "yowl": "latest"
+  }
+}
