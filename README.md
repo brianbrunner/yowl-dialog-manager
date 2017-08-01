@@ -50,7 +50,7 @@ DialogManager.add('step_1', {
     "What is the message that you'd like me to echo back?"
   ],
   onresponse: function(context, event, callback) {
-    context.echo = event.message;
+    context.session.echo = event.message;
     DialogManager.dialogs.step_2.play(context, event, callback);
   }
 });
@@ -60,7 +60,7 @@ DialogManager.add('step_2', {
     "You told me to echo \"{echo}\""
   ],
   after: function(context, event, callback) {
-    delete context.echo;
+    delete context.session.echo;
     DialogManager.dialogs.step_1.play(context, event, callback);
   }
 });
