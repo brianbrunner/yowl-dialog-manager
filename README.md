@@ -8,10 +8,11 @@ Multi-interaction dialog management for yowl
 $ npm install yowl-dialog-manager --save
 ```
 
-Dialog Manager also requires a persistent yowl context to handle dialog chaining and responses.
+Dialog Manager also requires a persistent yowl session to handle dialog chaining and responses.
 
-[yowl-context-memory](https://github.com/brianbrunner/yowl-context-memory)  
-[yowl-context-rethink](https://github.com/brianbrunner/yowl-context-rethink)
+[yowl-session-memory](https://github.com/brianbrunner/yowl-session-memory)  
+[yowl-session-memory](https://github.com/brianbrunner/yowl-session-redis)  
+[yowl-session-rethink](https://github.com/brianbrunner/yowl-session-rethink)
 
 ## Example
 
