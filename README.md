@@ -11,7 +11,7 @@ $ npm install yowl-dialog-manager --save
 Dialog Manager also requires a persistent yowl session to handle dialog chaining and responses.
 
 [yowl-session-memory](https://github.com/brianbrunner/yowl-session-memory)  
-[yowl-session-memory](https://github.com/brianbrunner/yowl-session-redis)  
+[yowl-session-redis](https://github.com/brianbrunner/yowl-session-redis)  
 [yowl-session-rethink](https://github.com/brianbrunner/yowl-session-rethink)
 
 ## Example
