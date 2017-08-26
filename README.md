@@ -32,7 +32,7 @@ var DialogManager = require('yowl-dialog-manager')();
 
 DialogManager.add('greet', {
   test: function(context, event) {
-    return !context.greeted;
+    return !context.session.greeted;
   },
   messages: [
     "Hello there!",
@@ -41,7 +41,7 @@ DialogManager.add('greet', {
     "This dialog is an overly complicated echo example."
   ],
   after: function(context, event, callback) {
-    context.greeted = true;
+    context.session.greeted = true;
     DialogManager.dialogs.step_1.play(context, event, callback);
   }
 });
