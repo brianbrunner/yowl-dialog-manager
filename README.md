@@ -102,7 +102,7 @@ Dialogs are added to the manager using `Manager.add(dialog_id, dialog_object)`
 Dialogs have the following options.
 
   * `messages` (Array, Required) - A list of strings to send to the user. Strings are automatically interpolated using values from the local context. So if your context is `{ name: "Goose" }` and your string is `Hello there {name}!`, the user will be sent `Hello there Goose!`. Variable names for interpolation can include multiple levels of properties (e.g. `{user.name}`)
-  * `actions` (Array, Required) - A list of actions to be sent back to the user. For more information on how actions work, you visis the [capabilities documentation](https://github.com/brianbrunner/yowl/blob/master/CAPABILITIES.md#actions).
+  * `actions` (Array, Optional) - A list of actions to be sent back to the user. For more information on how actions work, you visis the [capabilities documentation](https://github.com/brianbrunner/yowl/blob/master/CAPABILITIES.md#actions).
   * `test` (Boolean or Function, Optional, Default `false`) - This determines whether or not a dialog should be run. If this is a boolean, `true` will always cause the dialog to run and `false` will cause it to never run. If it's a function, the function should resemble `function(context, event) { ... some code ... }` and should return a boolean.
   * `onresponse` (Function(context, event, callback), optional) - A function to run when the user responds to a dialog. When a dialog with `onresponse` defined is run, the manager will automatically ensure that the `onresponse` function is running when the user sends a new interaction. It must call callback.
   * `before` (Function(context, event, callback), Optional) - A function to run before sending `messages`. It must call callback.
