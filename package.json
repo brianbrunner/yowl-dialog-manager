@@ -1,6 +1,6 @@
 {
   "name": "yowl-dialog-manager",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Multi-interaction dialog management for yowl",
   "main": "index.js",
   "scripts": {
