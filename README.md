@@ -92,10 +92,15 @@ var yowl = require('yowl');
 var bot = yowl();
 
 var Manager = require('yowl-dialog-manager');
-var myManager = Manager();
+var myManager = Manager('namespace', { preserve_on_error: false });
 
 bot.use(myManager);
 ```
+
+The `Manager` has the following positional arguments:
+
+* `namespace` (String, optional) - a unique namespace for this manager, required if you are using managers which have dialogs with clashing ids. You probably want to setup a namespace regardless.
+* `options` (Object, optional) - an options object. currently, the only option is `preserve_on_error` (Boolean, default false) which, when set to true, will preserve the current dialog chain in the event of an uncaught error. You most likely want to leave this to false so that your users don't get stuck in a continous error loop.
 
 Dialogs are added to the manager using `Manager.add(dialog_id, dialog_object)`
 
@@ -107,6 +112,7 @@ Dialogs have the following options.
   * `onresponse` (Function(context, event, callback), optional) - A function to run when the user responds to a dialog. When a dialog with `onresponse` defined is run, the manager will automatically ensure that the `onresponse` function is running when the user sends a new interaction. It must call callback.
   * `before` (Function(context, event, callback), Optional) - A function to run before sending `messages`. It must call callback.
   * `after` (Function(context, event, callback), Optional) - A function to run after sending `messages`. It must call callback.
+  * `cascade` (boolean, default `false`) - Whether or not to continue on to further methods in the bot
 
 For `onresponse`, `before` and `after`, you may omit the third argument `callback` if you do not need to do any asynchronous processing.
 
